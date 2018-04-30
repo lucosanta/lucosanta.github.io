@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+    {% include head.html %}
+
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
+				</header>
+
+
+				<!-- Nav -->
+					<nav id="nav">
+
+            {% include nav.html %}
+
+						<ul class="icons">
+              <li><a href="https://twitter.com/{{site.twitter}}" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+              <li><a href="https://facebook.com/{{site.facebook}}" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
+              <li><a href="https://instagram.com/{{site.instagram}}" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+              <li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+				<div id="main">
+					<article>
+							<div style="display:inline-block;margin-left:.5em;">
+									Browse by <a href="/blog/category/">Category</a> or <a href="/blog/tag/">Tag</a>
+								</div>
+								
+								<br/><br/>
+								
+								<div class="posts">
+									{% for post in paginator.posts %}
+									<div class="post">
+										<h1 class="post-title">
+											<a href="{{ post.url }}">
+												{{ post.title }}
+											</a>
+										</h1>
+								
+										<span class="post-date">
+											{{ post.date | date_to_string }}
+											{% if post.tags != empty %}
+											|
+											{% for tag in post.tags %}
+											<a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
+											{% endfor %}
+											{% endif %}
+										</span>
+								
+										{{ post.content | split:"<!-- more -->" | first % }}
+								
+										<div class="codinfox-post-more">
+											<a href="{{ post.url }}#disqus_thread">Comment</a>&nbsp;
+											<a href="{{ post.url }}">Read more</a>
+										</div>
+										<hr/>
+								
+									</div>
+									{% endfor %}
+								</div>
+								
+								<div class="pagination">
+									{% if paginator.next_page %}
+									<a class="pagination-item older" href="/blog/page{{paginator.next_page}}">Older</a>
+									{% else %}
+									<span class="pagination-item older">Older</span>
+									{% endif %}
+									{% if paginator.previous_page %}
+									{% if paginator.page == 2 %}
+									<a class="pagination-item newer" href="/blog">Newer</a>
+									{% else %}
+									<a class="pagination-item newer" href="/blog/page{{paginator.previous_page}}">Newer</a>
+									{% endif %}
+									{% else %}
+									<span class="pagination-item newer">Newer</span>
+									{% endif %}
+								</div>
+								{% for tag in tags %}
+									<a href="#{{ tag | slugify }}"> {{ tag }} </a>
+								{% endfor %}
+					</article>
+
+          <article class="post featured">
+            <header class="major">
+              <h2><a href="#">Robotics</a></h2>
+              <p>{{page.description}}
+			  </p>
+            </header>
+
+		  </article>
+		  
+					<!-- Post -->
+		<!--<section class="posts">
+			{% for post in site.posts %}
+			{% assign mod3 = forloop.index | modulo: 3 %}
+				<article>
+					<header>
+						<span class="date">{{ post.date | date_to_string }}</span>
+						<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</h2>
+					</header>
+					<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+					<p>{{ post.excerpt }}</p>
+					<ul class="actions">
+						<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
+					</ul>
+				</article>
+				{% if mod3 == 0 %}
+				<article>
+					<header>
+						<h2><a href="#">Sponsored</h2>
+					</header>
+
+				</article>
+				{% endif %}
+			{% endfor %}
+
+		</section>
+		<section class="posts">
+				<h2><a href="#">Robotics</a></h2>
+				{% for post in site.posts %}
+				{% assign mod3 = forloop.index | modulo: 3 %}
+					<article>
+						<header>
+							<span class="date">{{ post.date | date_to_string }}</span>
+							<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</h2>
+						</header>
+						<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+						<p>{{ post.excerpt }}</p>
+						<ul class="actions">
+							<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
+						</ul>
+					</article>
+					{% if mod3 == 0 %}
+					<article>
+						<header>
+							<h2><a href="#">Sponsored</h2>
+						</header>
+	
+					</article>
+					{% endif %}
+				{% endfor %}
+	
+			</section>-->
+
+					</div>
+
+				<!-- Footer -->
+        {% include foot.html %}
+
+			</div>
+
+			<!-- Scripts -->
+			{% include scripts-main.html %}
+			{% include tracking.html %}
+
+	</body>
+</html>
