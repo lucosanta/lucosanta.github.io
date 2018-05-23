@@ -32,7 +32,7 @@ sitemap:
     <p>Then he moved to <a href="http://www.tecla.it" target="_blank">Tecla Digital Business</a> where he had the role as <strong>Junior Java Developer</strong>. </p>
     <p>After six month he moved to <a href="http://www.teoresigroup.com/" target="_blank">Teoresi SPA</a> as Software Engineer designing and developing MATLAB/Python solutions for customers which requires it.</p>
     <p>He has fallen in love with Robotics and Machine Learning fields. He is currently spending most of his spare time to learn from Coursera courses in order to fill his losses and gain as much as he can in the Deep Learning field. Moreover, it tries some of the algorithm learned in Kaggle Competitions to prove his ability in the field against many of the most brilliant mind in data science.</p>
-    <p>He loves programming. His favourite language is Python which knows very well thanks to working experiences and Master Thesis implementations.</p>
+    <p>He loves programming. His favourite programming language is Python which knows very well thanks to many working experiences.</p>
 
 </div>
 
@@ -42,10 +42,9 @@ sitemap:
 
 <div class="box">
   <h3>Bachelor's thesis</h3>
-Bachelor's thesis based on Android library's development for ad-hoc communication with Bluetooth.
-Bachelor's thesis based on Android library's development for ad-hoc communication with Bluetooth.
-Bachelor's thesis based on Android library's development for ad-hoc communication with Bluetooth.
-Bachelor's thesis based on Android library's development for ad-hoc communication with Bluetooth.
+  <p><i>Disclaimer: This thesis was implemented in 2014 with Bluetooth 3.0</i></p>
+  <p>This work is meant to develop an Android library that lets you communicate among different mobile devices using Bluetooth technology.</p>
+  <p>This library is able to manage automatically any type of connections either it comes from other either it is started by device itself. It is able to manage the dynamics of the system using mobile devices, updating and highlightning in real time the neighbour devices list. It has been developed in using P2P (Peer to Peer) network type.</p> <p>The P2P feature is not part of Android library but it has been developed a library layer to mask the Master-Slave architecture (which is typical of the Bluetooth technology). The library is able to recognize not only its neighbour but also the neighbour of the neighbour and so on.</p><p> One of the most interesting features that has been implemented is the ability to create a network of communication. The only issues found relies on Bluetooth technology which is not able to support more than 7 devices at the same time. </p>
 </div>
 
 
